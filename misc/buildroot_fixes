@@ -1,0 +1,9 @@
+#!/bin/sh
+
+TARGET=output/target
+INITTAB=${TARGET}/etc/inittab
+INTERFACES=${TARGET}/etc/network/interfaces
+
+grep eth0 $INTERFACES || echo -e "auto eth0\niface eth0 inet dhcp" >> $INTERFACES
+
+exit 0;
