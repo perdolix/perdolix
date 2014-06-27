@@ -17,5 +17,5 @@ ppmquant -mapfile clut_vga16.ppm $INFILE | pnmnoraw > logo_blackfin_vga16.ppm
 ppmquant -mapfile clut_vga16.ppm $INFILE | pnmnoraw > logo_linux_vga16.ppm
 ppmquant -mapfile clut_vga16.ppm $INFILE | pnmnoraw > logo_superh_vga16.ppm
 
-logo_linux_mono.pbm
-logo_superh_mono.pbm
+#logo_linux_mono.pbm
+#logo_superh_mono.pbm

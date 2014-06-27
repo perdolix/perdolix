@@ -6,4 +6,10 @@ INTERFACES=${TARGET}/etc/network/interfaces
 
 grep eth0 $INTERFACES || echo -e "auto eth0\niface eth0 inet dhcp" >> $INTERFACES
 
+convert -resize 640x480\! -gravity center -extent 640x480 -colors 14 ../artwork/wallpaper/lunch.jpg boot/grub/splash.xpm
+gzip -f boot/grub/splash.xpm
+cp boot/grub/splash.xpm.gz ${TARGET}/boot/grub
+
+sed '/Buildroot ISO9660 image/ c\title\t\tGNU/Perdolix live CD' fs/iso9660/menu.lst -i
+
 exit 0;
