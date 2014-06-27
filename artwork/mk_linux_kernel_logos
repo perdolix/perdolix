@@ -1,0 +1,21 @@
+#!/bin/sh
+
+INFILE=logo_console.ppm
+
+pnmquant 224 $INFILE | pnmnoraw > logo_blackfin_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_dec_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_linux_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_m32r_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_mac_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_parisc_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_sgi_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_spe_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_sun_clut224.ppm
+pnmquant 224 $INFILE | pnmnoraw > logo_superh_clut224.ppm
+
+ppmquant -mapfile clut_vga16.ppm $INFILE | pnmnoraw > logo_blackfin_vga16.ppm
+ppmquant -mapfile clut_vga16.ppm $INFILE | pnmnoraw > logo_linux_vga16.ppm
+ppmquant -mapfile clut_vga16.ppm $INFILE | pnmnoraw > logo_superh_vga16.ppm
+
+logo_linux_mono.pbm
+logo_superh_mono.pbm
