@@ -18,3 +18,6 @@ distclean:
 
 save_configs:
 	make -C buildroot savedefconfig
+
+qemu_livecd:
+	qemu -cdrom buildroot/output/images/rootfs.iso9660 -m 4G
